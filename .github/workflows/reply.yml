@@ -32,3 +32,9 @@ jobs:
         bundler-cache: true # runs 'bundle install' and caches installed gems automatically
     - name: reply
       run: bundle exec ruby reply.rb
+      env:
+        CONSUMER_KEY: $${{ secrets.CONSUMER_KEY}}
+        CONSUMER_SECRET: $${{ secrets.CONSUMER_SECRET}}
+        ACCESS_TOKEN: $${{ secrets.ACCESS_TOKEN}}
+        ACCESS_TOKEN_SECRET: $${{ secrets.ACCESS_TOKEN_SECRET}}
+
