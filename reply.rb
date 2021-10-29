@@ -3,7 +3,7 @@
 require 'twitter'
 
 def reply(tweet)
-  resp = client.update("@#{tweet.user.screen_name} #{snark}", in_reply_to_status_id: tweet.id)
+  resp = client.update("@#{tweet.user.screen_name} #{elucidation}", in_reply_to_status_id: tweet.id)
   puts resp.url
 
   exit(true)
@@ -13,7 +13,7 @@ def tweets
   @tweets ||= client.search('spiderman', options).collect
 end
 
-def snark
+def elucidation
   <<~WORDS.strip.gsub(/\s+/, ' ')
     I’m really sorry to interrupt but, see, you’re saying it without the hyphen. It's
     just like the tiniest pause in between the words. Spider-Man.
