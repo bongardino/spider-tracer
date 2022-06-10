@@ -9,7 +9,7 @@ name: Reply
 
 on:
   schedule:
-    - cron: '0 */1 * * *'
+    - cron: '0 0 29 2 1' # feb 29, bc spiderbot got banned. RIP.
 #   workflow_dispatch
 
 jobs:
